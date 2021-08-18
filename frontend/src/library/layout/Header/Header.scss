@@ -1,0 +1,84 @@
+.Header {
+    background: #FFFFFF;
+    box-shadow: 0px 1.5rem 3rem rgba(0, 0, 0, 0.05);
+    padding: 2rem;
+    height: 8rem;
+    display: flex;
+    justify-content: space-between;
+    .left {
+        display: inline-flex;
+        align-items: center;
+       
+        img {
+            transition: transform .2s;
+            &:hover  {
+                transform: scale(1.1);
+            }
+        }
+    }
+    &_logo {
+        height: 7rem;
+    }
+    .right {
+        display: inline-flex;
+        align-items: center;
+        a {
+            font-family: $mainFont;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 1.4rem;
+            color: $gray;
+            transition: color .2s;
+            &.active {
+                font-weight: 700;
+                color: $main-color;
+            }
+            &:hover {
+                color: $main-color;
+            }
+        }
+        a:not(:last-child){
+            margin-right: 4.5rem;
+        }
+    }
+    .name {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: $gray;
+        transition: color .2s;
+        cursor: pointer;
+        margin-right: 2rem;
+    }
+    .profile {
+        height: 4rem;
+        width: 4rem;
+    }
+    .login {
+        font-family: $mainFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        color: $main-color;
+        transition: color .2s;
+        margin-right: 4.5rem;
+        cursor: pointer;
+
+    }
+    .confirm-title {
+        font-family: $sceondaryFont;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2rem;
+        text-align: center;
+        color: #334144;
+    }
+    .confirm-button {
+        width: 100%;
+    }
+}

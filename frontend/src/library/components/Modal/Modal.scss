@@ -1,0 +1,28 @@
+.Modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba($black, .5);
+    z-index: 10;
+    animation: fadeIn backwards ease-in .2s;
+    
+    .modal-content {
+        position: absolute;
+        background-color: $white;
+        width: 44rem;
+        padding: 3rem;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        &.large {
+            width: 61rem;
+            padding: 6rem 11rem;
+            @include media(phone){
+                width: 90vw;
+                padding: 6rem 2rem;
+            }
+        }
+    }
+}

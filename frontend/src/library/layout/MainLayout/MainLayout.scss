@@ -1,0 +1,17 @@
+.MainLayout {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    flex-direction: column;
+    
+    .content {
+        height: calc(100vh - 8rem);
+        width: inherit;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        @include scrollbar;
+    }
+}

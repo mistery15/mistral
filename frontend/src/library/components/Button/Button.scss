@@ -1,0 +1,49 @@
+.Button {
+    font-family: $sceondaryFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    text-align: center;
+    padding: 0.9rem 1.5rem;
+    text-align: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: all .2s;
+    &:disabled {
+        opacity: .5;
+    }
+    &.orange {
+        background: linear-gradient(270deg, $main-color-light 0%, $main-color 100%);
+        box-shadow: 0 1.5rem 2rem rgba($gray, 0.2);
+        border-radius: 2rem;
+        color: $white;
+    }
+    &.transparent {
+        background: rgba($black, 0.5);
+        color: $white;
+        border-radius: 2rem;
+        box-shadow: 0 1.5rem 2rem rgba($gray, 0.2);
+        transition: all .2s;
+        &:hover {
+            background: linear-gradient(270deg, $main-color-light 0%, $main-color 100%);
+            box-shadow: 0 1.5rem 2rem rgba($gray, 0.2);
+            border-radius: 2rem;
+        }
+    }
+    &.large {
+        border-radius: 5rem;
+        font-family: $mainFont;
+        font-weight: 500;
+        font-size: 1.4rem;
+        line-height: 1.4rem;
+        padding: 1.2rem 2.2rem;
+    }
+    &.normal-border {
+        border-radius: 0.3rem;
+        padding: 1.8rem 1.5rem;
+        margin-top: 1rem;
+    }
+   
+}

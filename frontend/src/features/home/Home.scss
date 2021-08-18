@@ -1,0 +1,79 @@
+.MovieGrid {
+    padding: 9rem 2rem;
+    display: grid;
+    height: 50rem;
+    gap: 2rem;
+    grid-template-rows: repeat(2, minmax(35rem, min-content));
+    grid-auto-rows: minmax(35rem, min-content);
+    grid-template-columns: repeat(auto-fill, 28rem);
+    justify-content: center;
+    height: max-content;
+    @include media(tablet-portrait){
+        grid-template-columns: repeat(auto-fill, 22rem);
+        grid-template-rows: repeat(2, minmax(29rem, min-content));
+        grid-auto-rows: minmax(29rem, min-content);
+    }
+    @include media(phone){
+        grid-template-columns: repeat(auto-fill, 16rem);
+        grid-template-rows: repeat(2, minmax(23rem, min-content));
+        grid-auto-rows: minmax(23rem, min-content);
+        padding: 9rem 0;
+    }
+}
+
+.TypeSwitch {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    padding: 0 2rem;
+    height: 4rem;
+    margin-top: 4rem;
+    & .movie {
+        width: 50%;
+        border-top-left-radius: 1.5rem;
+        border-bottom-left-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+        background-color: rgba($gray-light, 1);
+        transition: color .2s, background-color .2s;
+        font-family: $mainFont;
+
+        &.active {
+            background-color: $main-color;
+            color: $white;
+        }
+        &:hover {
+            background-color: rgba($main-color, .8);
+            color: $white;
+        }
+    }
+    & .show {
+        width: 50%;
+        border-top-right-radius: 1.5rem;
+        border-bottom-right-radius: 1.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.4rem;
+        background-color: rgba($gray-light, 1);
+        transition: color .2s, background-color .2s;
+        font-family: $mainFont;
+        
+        &.active {
+            background-color: $main-color;
+            color: $white;
+        }
+        &:hover {
+            background-color: rgba($main-color, .8);
+            color: $white;
+        }
+    }
+}
+
+.LoadButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
